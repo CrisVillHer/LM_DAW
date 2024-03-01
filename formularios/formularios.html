@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios HTML</title>
+</head>
+<body>
+<h1 align="right">07/02/2024</h1>
+   <h2>Ejemplo de formulario básico</h2> 
+    <br>
+    <!-- para poner la etiqueta form no hace falta poner <form> simplemente con escribir form te sale la opcion para ponerlo -->
+        <!-- tambien se puede enviar a un correo poniendo en action "mailto:critso@sdkfn.com" -->
+    <form name="formulario" method="post" action="https://www.dawasirfp.com/datosAlumnos.php"> 
+
+        <!-- para poner la etiqueta input se hace lo mismo que con la de form -->
+        Nombre alumno: <input type="text" name="alumno" id="">
+        <!-- el inputt submit es un boton -->
+        <br> <input type="submit" value="Registro">
+    </form>
+    <br>
+    <hr>
+    <br>
+    <h2>Ejemplo de las etiquetas de entrada de datos en formularios html</h2>
+    <form name="formulario" method="post" action="https://www.dawasirfp.com/datosAlumnos.php">
+
+    Entrada de texto: <input type="text" name="" id="">
+
+    <br>Texto de búsqueda: <input type="search" name="" id="">
+
+    <br>Introducir numeros de telefono: <input type="tel" name="" id="">
+
+    <br>Introducir Direccion UML: <input type="url" name="" id="">
+
+    <br>Introducir dirección de correo: <input type="email" name="" id="required">
+    <!-- si se pone un required en el id, significa que ese campo hay que rellenarlo de forma correcta -->
+    <br>Introducir Password: <input type="password" name="" id="">
+
+    <br>Opinion sobre la materia de lenguaje de  marcas
+    <!-- esta etiqueta que se pone como la etiqueta form, sirve para poner una reseña/ opinion -->
+    <!-- el cols y rows sirve para poner cuanto de largo y de ancho se quiere la caja -->
+    <!-- con el atributo dentro de esta etiqueta de maxlenght="" se puede poner un numero maximo de caracteres -->
+    <!-- el atributo placeholder="" sirve para poner un texto en la caja de texto para indicar lo que se tiene que escribir -->
+    <br><textarea name="opiniones de alumnos" id="" cols="30" rows="10"
+    placeholder="Escribe aqui la opinion sobre la materia"></textarea>
+
+    <br>
+    <hr>
+    <br>
+    <h2>Ejemplos con etiquetas basicas de entrada</h2>
+    <form name="formulario" method="post" action="https://www.dawasirfp.com/datosAlumnos.php">
+
+        Nombre: <input type="text" name="" id="" placeholder="Indica tu nombre de pila. Ejemplo: Raul">
+    
+        <br>Introduzca su correo: <input type="email" name="mail" id="" placeholder="Raul@unir.fp" required>
+
+        <br>Telefono: <input type="tel" name="" id="" required placeholder="+34 xxx xxx xxx">
+    
+        <br>Web de contacto: <input type="url" name="" id="" placeholder="https://unir.es">
+    
+        <br>Introducir Password: <input type="password" name="" id="" placeholder="Contraseña alfanumerica">
+    
+        <br>Comentarios
+
+        <br><textarea name="opiniones de alumnos" id="" cols="30" rows="10"
+        placeholder="Escribe aqui la opinion sobre la materia"></textarea>
+
+        <br> <input type="submit" value="Registro">
+
+    <br>
+    <hr>
+    <br>
+    <h2>Campos numericos</h2>    
+    <form name="formulario" method="post" action="https://dam.es">
+        <!-- Ejemplo input type = number: Número entre 10 y 50, de 5 en . Valor por defecto: 25 -->
+        <input type="number" name="numero" id="" value="25" min="10" max="50" step="5">
+        <br>
+        <!-- Su misma versión, utilizando el slider en rango numérico -->
+        <input type="range" name="numrango" id="" value="25" min="10" max="50" step="5">
+    </form>
+
+ <br>
+ <hr>
+ <br>
+ <h1 align="right">07/02/2024</h1>
+ <h2>Campos de entrada numéricos: Fecha y hora</h2>
+ <br>
+ tipos de input de fecha y hora
+ <br>
+ <ul>
+     <li><b>Fecha:</b>Utilizamos el input = date</li>
+     <li><b>Hora: </b>Utilizamos el input = time</li>
+     <li><b>Fecha y hora local</b>Utilizamos el input = datetime-local </li>
+     <li><b>Mes</b>Utilizamos el input = month</li>
+     <li><b>Semana</b>Utilizamos el input = week </li>
+ </ul>
+ <br>Ejemplos:
+ <br> Fecha: <input type="date" name="" id="">
+ <br>
+ <br> Hora: <input type="time" name="" id="">
+ <br>
+ <br> Fecha y hora local: <input type="datetime-local" name="" id="">
+ <br>
+ <br>Mes: <input type="month" name="" id="">
+ <br>
+<br>Semana: <input type="week" name="" id="">
+<br>
+<br>Ejemplo de Formulario con Fecha y Horas con maz, min y step
+<br>
+<form action="http://mipagginaweb.com/basededatos.php" method="post" name="formulario">
+Selecciona la fecha deseada: <input type="date" name="dia" id="" min="2024-02-07" max="2024-05-05" step="2">
+<br>
+<br>Selecciona la hora deseada: <input type="time" name="hora" id="" min="18:00" max="23:00" step="3600">
+</form>
+
+<br>
+<hr>
+<br>
+<br><h2>Formulario con Checkbox y Botones radio</h2>
+<br>
+<form action="http://mipagginaweb.com/basededatos.php" method="post" name="formulario">
+    Selecciona la titulacion que esta estudiando actualmente:
+
+<!-- el atributo value es para darle un valor -->
+    <br><input type="radio" name="FP" id="" value="ASIR">ASIR
+    <br><input type="radio" name="FP" id="" value="ASIR">ASIR
+    <br><input type="radio" name="FP" id="" value="ASIR">ASIR
+
+    <br>Le gustaria segui formandose en area it?
+
+<!-- Con el atributo checked lo que hace es que se marque por defecto una casilla -->
+    <br><input type="checkbox" name="formacion" id="" checked>SI
+    <br><input type="checkbox" name="formacion" id="">No
+</form>
+
+<br>
+<hr>
+<br>
+<h2>Listas de seleccion</h2>
+<br>tipos de listas de seleccion:
+<br>
+<ul>
+    <li>Listas (cerradas) de opciones: select y option</li>
+    <li>Listtas (abiertas) de opciones: datalist</li>
+</ul>
+<br>
+<h3>Ejemplo de lista cerrada</h3>
+Lista de sistemas operativos:
+<!-- se pone directamente select y sale -->
+<select name="Sistemas operativos" id="">
+<!-- para darle 4 opciones se pone: option*4 -->
+<option value="1">Windows 11</option>
+<option value="2">Ubuntu</option>
+<option value="3">Linux Mint</option>
+<option value="4">Mac OS Yosemite</option>
+</select>
+
+<br>
+<h3>Ejemplo de lista abiertra</h3>
+Lista de Asignaturas DAW/ASIR:
+<!-- Se pone un input type y se borra el type para poner list -->
+<!-- el nombre de list y de id tiene que ser el mismo -->
+<input list="materia">
+    <datalist id="materia">
+<!-- para darle 4 opciones se pone: option*4 -->
+        <option value="FHW">FHW</option>
+        <option value="ISO">ISO</option>
+        <option value="SSII">SSII</option>
+        <option value="LMSGE">LMSGE</option>
+        <option value="PROG">PROG</option>
+        <option value="BBDD/GBBDD">BBDD/GBBDD</option>
+    </datalist>
+
+<br>
+<h3>Listas de Seleccion Multiple</h3> 
+   <!--Hay que coger un formulario  -->
+   <form action="http://mipagginaweb.com/basededatos.php" method="post" name="formulario">
+    Selecciona la titulacion que esta estudiando actualmente:
+    <!-- El atributo octgroup permite hacer una seleccion multiple -->
+    <!-- En el select hay que poner multiple para indicar que la seleccion es multiple -->
+    <select name="combo" id="" multiple>
+        <!-- el atributo laber sirve para poner un nombre -->
+        <optgroup label="ASIR">
+            <option value="1" label="FHW"></option>
+            <option value="2" label="ISO"></option>
+            <option value="3" label="SSII"></option>
+            <option value="4" label="LMSGE"></option>
+            <option value="5" label="BBDD/GBBDD"></option>
+        </optgroup>
+        <optgroup label="DAW">
+            <option value="6" label="ED"></option>
+            <option value="7" label="BBDD"></option>
+            <option value="8" label="PROG"></option>
+            <option value="9" label="LMSGE"></option>
+            <option value="10" label="SSII"></option>
+        </optgroup>
+    </select>
+</form>
+
+<br>
+<h3>Seleccion de colores</h3>
+<!-- input:color -->
+Selecciona el color que deseas: <input type="color" name="" id="">
+
+<h3>Seleccionar aarchivos</h3>
+Adjuntar un archivo a nuestro enviar del formulario
+<!--  A traves del atributo accept, podemos delimitar e indicar el tipo de archivo (formato que queremos que se adjunte) -->
+<!-- Para permitir que se envien varios archivos se puede poner el atributo multiple -->
+<br><input type="file" name="" id="" value="adjuntar archivos" accept=".pdf, .png" multiple>
+
+<br>
+<hr>
+<br>
+<h2>Agrupaciones de Campos</h2>
+Son etiquetas que nos permite organizar los elementos de nuestros formularios reagrupandolos por categoria o tematicas.
+<ul>
+    <li><b>Fieldset:</b>Agrupa de manera visual los campos de entrada por tematica</li>
+    <li><b>Legend</b>Una leyenda para la etiqueta fieldset</li>
+    <li><b>Label:</b>Relaciona el campo y el texto de un formulario</li>
+</ul>
+
+<br>
+<br>Ejemplo de formulario sencillo:
+<br><form action="mailto:cristinavillahermosa32@gmail.com" method="post" name="formulario">
+    <fieldset>
+        <legend>Ficha del alumno</legend>
+        <fieldset>
+            <legend>Datos personales</legend>
+            Nombre: <input type="text" name="name" id="" placeholder="indica un nombre de pila">
+            <br>
+            Apellidos <input type="text" name="apellidos" id="" placeholder="1º y 2º apellido">
+        </fieldset>
+        <fieldset>
+            <legend>Formacion academica</legend>
+            <br> <input type="checkbox" name="sin estudios" id="">sin estudios
+            <br> <input type="checkbox" name="ESO" id="" checked>ESO
+            <br> <input type="checkbox" name="BACH" id="">BACH
+            <br> <input type="checkbox" name="FP" id="">FP
+            <br> <input type="checkbox" name="Grado universitario" id="">Grado universitario
+            <br> <input type="checkbox" name="Master" id="">Master
+        </fieldset>
+    </fieldset>
+</form>
+
+<br>
+<h2>Botones en Formularios HTML</h2>
+Hay 4 diferentes tipos de botones:
+<ul>
+    <li><b>Boton de envio del formulario</b>input type = submit</li>
+    <li><b>Boton de envio con imagen</b>input type = image</li>
+    <li><b>Boton de reseteo o borrado</b>input type = reset</li>
+    <li><b>Boton sin funcionalidad</b>input type = button o definidos con las etiquetas de apertura y cierre</li>
+</ul>
+
+<br>
+<h3>Ejemplo de boton de envio del formulario (submit)</h3>
+<!-- Hay que poner un formulario -->
+<form action="mailto:cristinavillahermosa32@gmail.com" method="post" name="formulario">
+<br>Nombre y apellidos: <input type="text" name="" id=""> <input type="submit" value="Enviar correo a cristina">
+</form>
+
+<br>
+<h3>Ejemplo de boton de envio con imagen (image)</h3>
+<!-- Hay que poner un formulario -->
+<form action="mailto:cristinavillahermosa32@gmail.com" method="post" name="formulario">
+<br>Nombre y apellidos: <input type="text" name="" id=""> <input type="image" src="imagenes/playstation.png" width="35px" height="35px">
+</form>
+
+<br>
+<h3>Ejemplo de boton de reseteo o borrado (reset)</h3>
+<!-- Hay que poner un formulario -->
+<form action="mailto:cristinavillahermosa32@gmail.com" method="post" name="formulario">
+<br>Nombre y apellidos: <input type="text" name="" id=""> <input type="submit" value="Registrar"> <input type="reset" value="Eliminar">
+</form>
+
+<br>
+<h3>Ejemplo de boton sin funcionalidad o funcionalidad con javascript</h3>
+<!-- Hay que poner un formulario -->
+<form action="mailto:cristinavillahermosa32@gmail.com" method="post" name="formulario">
+<!-- el onclick es un metodo de java script q lo que hace es que cuando se l evaya a dar click en el boton, que haga algo, en este caso se muestra una alerta que es una ventana emergente -->
+<button onclick="alert ('hola esto es un boton en js dentro de un formularioi html')">Pincha aquí</button>
+</form>
+
+</body>
+</html>
